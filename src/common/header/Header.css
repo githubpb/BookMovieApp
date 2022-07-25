@@ -1,0 +1,29 @@
+.header-style {
+    background-color: #222;
+    height: 36px;
+    padding: 8px 32px 8px 16px;
+}
+
+.login-logout-button{
+    float: right;
+}
+
+.book-show-button{
+    float: right;
+}
+
+.logo-icon-style{
+    background-color: #ff7f7f;
+    height: 35px;
+    animation: rotation 8s infinite linear;
+    float: left;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
