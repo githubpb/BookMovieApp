@@ -10,6 +10,7 @@
 
 .book-show-button{
     float: right;
+    margin-right: 8px;
 }
 
 .logo-icon-style{
@@ -20,10 +21,17 @@
 }
 
 @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    from { transform: scaleX(-1); }
   }
+
+.showEmpty{
+    display: none;
+}
+
+.showData{
+    display: block;
+}
+
+.red{
+    color: red;
+}

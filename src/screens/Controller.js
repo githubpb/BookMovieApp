@@ -7,12 +7,12 @@ import Confirmation from "../screens/confirmation/Confirmation";
 import Header from "../common/header/Header"
 
 const Controller = () => {
-  const baseUrl = "/api/v1/";
+  const baseUrl = "/api/v1/"
 
   return (
     <Router>
       <div className="main-container">
-        <Header></Header>
+      <Header></Header>
         {/* <Route
           exact
           path="/"
