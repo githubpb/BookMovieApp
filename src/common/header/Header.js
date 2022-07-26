@@ -168,7 +168,15 @@ class Header extends Component {
         };
         
         fetch("/api/v1/signup", requestOptions)
-          .then(response => response.text())
+          .then(response => 
+            {
+                response.text()
+                if(response.status === 201) {
+                    this.setState({
+                        registrationSuccess: true
+                    })
+                }
+            })
           .then(result => console.log(result))
           .catch(error => console.log('error', error));
     }
@@ -221,7 +229,7 @@ class Header extends Component {
                             </Button>
                         </div>
                     }
-                    {!this.state.loggedIn
+                    {this.props.showBookShowButton === "true" && !this.state.loggedIn
                         ? <div className="book-show-button">
                             <Button variant="contained" color="primary" onClick={this.openModal}>
                                 Book Show
@@ -230,7 +238,7 @@ class Header extends Component {
                         : ""
                     }
 
-                    { this.state.loggedIn
+                    {this.props.showBookShowButton === "true" && this.state.loggedIn
                         ? <div className="book-show-button">
                             <Link to={"/bookshow/" + this.props.id}>
                                 <Button variant="contained" color="primary">
