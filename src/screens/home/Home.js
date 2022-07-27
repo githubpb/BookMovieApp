@@ -79,9 +79,6 @@ class Home extends Component {
                     upcomingMoviesList: JSON.parse(result).movies
                 })
             })
-            .catch(error => console.log('error', error));
-
-
 
         fetch(this.props.baseUrl + "movies?status=RELEASED", requestOptions)
             .then(response => response.text())
@@ -90,7 +87,6 @@ class Home extends Component {
                     listReleasedMovies: JSON.parse(result).movies
                 })
             })
-            .catch(error => console.log('error', error));
 
         fetch(this.props.baseUrl + "genres", requestOptions)
             .then(response => response.text())
@@ -99,7 +95,6 @@ class Home extends Component {
                     listGenres: JSON.parse(result).genres
                 })
             })
-            .catch(error => console.log('error', error));
 
 
         fetch(this.props.baseUrl + "artists", requestOptions)
@@ -109,7 +104,6 @@ class Home extends Component {
                     artistsList: JSON.parse(result).artists
                 })
             })
-            .catch(error => console.log('error', error));
     }
 
     filterApplyHandler = () => {
@@ -142,7 +136,6 @@ class Home extends Component {
                     listReleasedMovies: JSON.parse(result).movies
                 })
             })
-            .catch(error => console.log('error', error));
     }
 
     releaseDateStartMethod = event => {
